@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>ZCL_SCPMS_NOTIFICATION</CLSNAME>
+    <LANGU>E</LANGU>
+    <DESCRIPT>SAP Cloud Platform Mobile Services Push Notification Data</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+    <RSTAT>K</RSTAT>
+    <MSG_ID>ZSCPMS_PUSH_NOTIF</MSG_ID>
+   </VSEOCLASS>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_SCPMS_NOTIFICATION</CLSNAME>
+     <CMPNAME>CREATE_APNS_NOTIFICATION</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Create an Apple Notification</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_SCPMS_NOTIFICATION</CLSNAME>
+     <CMPNAME>CREATE_FCM_NOTIFICATION</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Create a Google Notification</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_MSAG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <T100A>
+    <ARBGB>ZSCPMS_PUSH_NOTIF</ARBGB>
+    <MASTERLANG>E</MASTERLANG>
+    <STEXT>SCPms Push Notification Messages</STEXT>
+   </T100A>
+   <T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZSCPMS_PUSH_NOTIF</ARBGB>
+     <MSGNR>001</MSGNR>
+     <TEXT>Application ID can&apos;t be empty.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZSCPMS_PUSH_NOTIF</ARBGB>
+     <MSGNR>002</MSGNR>
+     <TEXT>Registration ID can&apos;t be empty.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZSCPMS_PUSH_NOTIF</ARBGB>
+     <MSGNR>003</MSGNR>
+     <TEXT>Registration list can&apos;t empty. Please supply at least one registration.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZSCPMS_PUSH_NOTIF</ARBGB>
+     <MSGNR>004</MSGNR>
+     <TEXT>User list can&apos;t empty. Please supply at least one user.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZSCPMS_PUSH_NOTIF</ARBGB>
+     <MSGNR>005</MSGNR>
+     <TEXT>Subaccount not defined. Please verify config.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZSCPMS_PUSH_NOTIF</ARBGB>
+     <MSGNR>006</MSGNR>
+     <TEXT>Error creating URL.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZSCPMS_PUSH_NOTIF</ARBGB>
+     <MSGNR>007</MSGNR>
+     <TEXT>Error sending request.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZSCPMS_PUSH_NOTIF</ARBGB>
+     <MSGNR>008</MSGNR>
+     <TEXT>Error receiving response.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZSCPMS_PUSH_NOTIF</ARBGB>
+     <MSGNR>009</MSGNR>
+     <TEXT>Notification data can&apos;t be empty. Please fill at least one field.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZSCPMS_PUSH_NOTIF</ARBGB>
+     <MSGNR>010</MSGNR>
+     <TEXT>User name can&apos;t be empty.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZSCPMS_PUSH_NOTIF</ARBGB>
+     <MSGNR>011</MSGNR>
+     <TEXT>Close connection failed.</TEXT>
+    </T100>
+   </T100>
+  </asx:values>
+ </asx:abap>
+</abapGit>

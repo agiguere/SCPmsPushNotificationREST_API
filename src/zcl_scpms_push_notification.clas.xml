@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>ZCL_SCPMS_PUSH_NOTIFICATION</CLSNAME>
+    <LANGU>E</LANGU>
+    <DESCRIPT>Push Notification to SCPms</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+    <RSTAT>K</RSTAT>
+    <MSG_ID>ZSCPMS_PUSH_NOTIF</MSG_ID>
+   </VSEOCLASS>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_SCPMS_PUSH_NOTIFICATION</CLSNAME>
+     <CMPNAME>CONSTRUCTOR</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>CONSTRUCTOR</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_SCPMS_PUSH_NOTIFICATION</CLSNAME>
+     <CMPNAME>DESTINATION_NAME</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Logical Destination</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_SCPMS_PUSH_NOTIFICATION</CLSNAME>
+     <CMPNAME>HTTP_CLIENT</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>HTTP Client Abstraction</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_SCPMS_PUSH_NOTIFICATION</CLSNAME>
+     <CMPNAME>NOTIFICATION</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>SAP Cloud Platform Mobile Services Notification Data</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_SCPMS_PUSH_NOTIFICATION</CLSNAME>
+     <CMPNAME>PUSH_TO_APPLICATION</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Send to all the devices registered to an application</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_SCPMS_PUSH_NOTIFICATION</CLSNAME>
+     <CMPNAME>PUSH_TO_APP_REGISTRATION</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Send to a particular device by using the app registration id</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_SCPMS_PUSH_NOTIFICATION</CLSNAME>
+     <CMPNAME>PUSH_TO_APP_REGISTRATION_LIST</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Send to devices by using the app registration list</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_SCPMS_PUSH_NOTIFICATION</CLSNAME>
+     <CMPNAME>PUSH_TO_APP_USERS</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Send to a user list of an application</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_SCPMS_PUSH_NOTIFICATION</CLSNAME>
+     <CMPNAME>PUSH_TO_APP_USER_DEVICES</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Send to all the devices registered to a user</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_SCPMS_PUSH_NOTIFICATION</CLSNAME>
+     <CMPNAME>SEND_PUSH</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Send Notification to SCPms</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>
