@@ -5,14 +5,15 @@ These ABAP classes will help you sending push notification from your SAP backend
 
 ## Backend Compatbility
 
-Any SAP Business Suite systems (ERP, HCM, SRM ...) runnning SAP NetWeaver 731 or higher
+Any SAP Business Suite systems (ERP, HCM, SRM ...) runnning SAP NetWeaver 731 or higher.
 
 ## Installation & Configuration Steps
 
 ### Step 1 - Create and configure an RFC destination
 
 Create an RFC destination of type G in transaction SM59
-Named it SCPMS_ENHANCED_PUSH as an example of whatever you prefer
+
+Named it `SCPMS_ENHANCED_PUSH` as an example or whatever you prefer.
 
 Under the tab `Technical Settings` enter the target host of your SCP mobile services, the URL pattern should look something like
 
@@ -49,7 +50,7 @@ Click the `Connection Test` button and you should have an `HTTP 404 Not Found`, 
 
 Install [abapGit.](https://docs.abapgit.org/guide-install.html)
 
-### Step 5 - Import this report in your system
+### Step 5 - Import the SCPmsPushNotificationREST_API repo in your system
 
 Run `abapGit` and clone this repo by [installing an online repo.](https://docs.abapgit.org/guide-online-install.html)
 
@@ -77,3 +78,69 @@ Example:
 - SCPms Sub-account C --> SAP Gateway Development --> SAP ERP Development
 
 ## API Documentation
+
+**ZCL_SCPMS_PUSH_NOTIFICATION**
+
+| Method                        | Description                                                          |
+| ----------------------------- | -------------------------------------------------------------------- |
+| GET_INSTANCE                  | Factory method                                                       |
+| ----------------------------- | -------------------------------------------------------------------- |
+| PUSH_TO_APPLICATION           | Push notification to devices registered to an application            |
+| ----------------------------- | -------------------------------------------------------------------- |
+| PUSH_TO_APP_USER_DEVICES      | Push notification to all devices registered to a particular user.    |
+| ----------------------------- | -------------------------------------------------------------------- |
+| PUSH_TO_APP_USERS             | Push notification to a list of users.                                |
+| ----------------------------- | -------------------------------------------------------------------- |
+| PUSH_TO_APP_REGISTRATION      | Push notification to a device using the application registration ID. |
+| ----------------------------- | -------------------------------------------------------------------- |
+| PUSH_TO_APP_REGISTRATION_LIST | Push notification to a list of registrations                         |
+| ----------------------------- | -------------------------------------------------------------------- |
+| CREATE_APNS_NOTIFICATION      | DEPRECATED                                                           |
+| ----------------------------- | -------------------------------------------------------------------- |
+| CLOSE_CONNECTION              | Close RFC connection                                                 |
+
+
+ZCL_SCPMS_APNS_NOTIFICATION subclass of ZCL_SCPMS_NOTIFICATION, implement interface `ZIF_SCPMS_NOTIFICATION`.
+
+Example: How to create a notification
+
+  ```ABAP
+    DATA(notification) = zcl_scpms_notification=>create_apns_notification( ).
+
+    notification->set_title( alert_title ).
+
+    notification->set_body( alert_body ).
+
+    notification->set_badge( CONV #( badge_value ) ).
+  ```
+
+Example: How to send a push notification to a list of users
+```ABAP
+  DATA scp_users TYPE zscpms_user_t.
+
+  TRY.
+      DATA(push) = zcl_scpms_push_notification=>get_instance( ).
+
+      APPEND INITIAL LINE TO scp_users ASSIGNING FIELD-SYMBOL(<scp_user>).
+      <scp_user>-name = 'myUserID'.
+
+      DATA(response) = push->push_to_app_users(
+        application_id = application_id
+        users          = scp_users
+        notification   = notification ).
+
+        response->get_status(
+          IMPORTING
+            code   = DATA(code)
+            reason = DATA(reason) ).
+
+        IF code BETWEEN 200 AND 299.
+          "Success  
+        ELSE.
+          "Handle network error  
+        ENDIF.
+
+    CATCH zcx_scpms_push_notification INTO DATA(ex).
+      "Handle exception error
+  ENDTRY.
+```
