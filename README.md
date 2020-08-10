@@ -84,19 +84,12 @@ Example:
 | Method                        | Description                                                          |
 | ----------------------------- | -------------------------------------------------------------------- |
 | GET_INSTANCE                  | Factory method                                                       |
-| ----------------------------- | -------------------------------------------------------------------- |
 | PUSH_TO_APPLICATION           | Push notification to devices registered to an application            |
-| ----------------------------- | -------------------------------------------------------------------- |
 | PUSH_TO_APP_USER_DEVICES      | Push notification to all devices registered to a particular user.    |
-| ----------------------------- | -------------------------------------------------------------------- |
 | PUSH_TO_APP_USERS             | Push notification to a list of users.                                |
-| ----------------------------- | -------------------------------------------------------------------- |
 | PUSH_TO_APP_REGISTRATION      | Push notification to a device using the application registration ID. |
-| ----------------------------- | -------------------------------------------------------------------- |
 | PUSH_TO_APP_REGISTRATION_LIST | Push notification to a list of registrations                         |
-| ----------------------------- | -------------------------------------------------------------------- |
 | CREATE_APNS_NOTIFICATION      | DEPRECATED                                                           |
-| ----------------------------- | -------------------------------------------------------------------- |
 | CLOSE_CONNECTION              | Close RFC connection                                                 |
 
 
