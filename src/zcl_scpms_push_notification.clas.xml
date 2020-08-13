@@ -34,12 +34,6 @@
     </SEOCOMPOTX>
     <SEOCOMPOTX>
      <CLSNAME>ZCL_SCPMS_PUSH_NOTIFICATION</CLSNAME>
-     <CMPNAME>NOTIFICATION</CMPNAME>
-     <LANGU>E</LANGU>
-     <DESCRIPT>SAP Cloud Platform Mobile Services Notification Data</DESCRIPT>
-    </SEOCOMPOTX>
-    <SEOCOMPOTX>
-     <CLSNAME>ZCL_SCPMS_PUSH_NOTIFICATION</CLSNAME>
      <CMPNAME>PUSH_TO_APPLICATION</CMPNAME>
      <LANGU>E</LANGU>
      <DESCRIPT>Send to all the devices registered to an application</DESCRIPT>
