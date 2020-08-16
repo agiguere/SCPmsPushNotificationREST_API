@@ -1,4 +1,5 @@
 # SCPmsPushNotificationREST_API
+
 SCPms Push Notification REST API for ABAP.
 
 These ABAP classes will help you sending push notification from your SAP backend to SAP Cloud Platform Mobile Services, right now I only support push notification for iOS but it could easily be extended for Google FCM. 
@@ -27,11 +28,11 @@ Under the `Logon & Security` tab, select basic authentication and enter your SAP
 
 A good practice is to create a dedicated S-user only for push notification, you could ask your basis team to create this user for you and enter it in the destination.
 
-To conclude, click SSL active at the bottom.
+To conclude, click SSL active at the bottom and make sure the SSL certificate is set to `DFAULT SSL Client (Starndard)`.
 
 ### Step 2 - Import SCP certificate to the SAP System Trust Store
 
-Make sure the SAP Cloud Platform root certificate has been imported in transaction STRUST.
+Make sure the SAP Cloud Platform root certificate has been imported in transaction STRUST under default SSL client (Starndard).
 If it is not there, go to your mobile services sub-account and download the root certificate to your desktop. If you don't have access to transaction `STRUST`, ask any basis from your team to import it on your behalf.
 
 In chrome, you can download the certificate by clicking the lock icon in the URL toolbar, then click `Certificate`.
@@ -44,7 +45,7 @@ After importing the certificate, restart ICM.
 
 Go back to your RFC destination in transaction SM59 and test it.
 
-Click the `Connection Test` button and you should have an `HTTP 404 Not Found`, rest assure, that is perfecly fine.
+Click the `Connection Test` button and you should have an `HTTP 404 Not Found`, rest assure, that is perfecly fine, this is because of the path prefix.
 
 ### Step 4 - Install abapGit
 
@@ -64,6 +65,8 @@ Under the `Push Notification` feature, configure the Apple APNS section, I sugge
 1) We need to give permission to our S-user to be able to send notifcations, the same user we have configured in our RFC destination. In SCP, go to Services -> Mobile Services -> Configure Mobile Services -> Roles -> Click the `Notification User` then assign your S-user that was created in step 1
 
 ### Step 7 - Use the API to send push notifications
+
+Please consult the API documentation below for examples.
 
 ### Step 8 - Configure your other systems
 
@@ -89,9 +92,7 @@ Example:
 | PUSH_TO_APP_USERS             | Push notification to a list of users.                                |
 | PUSH_TO_APP_REGISTRATION      | Push notification to a device using the application registration ID. |
 | PUSH_TO_APP_REGISTRATION_LIST | Push notification to a list of registrations                         |
-| CREATE_APNS_NOTIFICATION      | DEPRECATED                                                           |
 | CLOSE_CONNECTION              | Close RFC connection                                                 |
-
 
 ZCL_SCPMS_APNS_NOTIFICATION subclass of ZCL_SCPMS_NOTIFICATION, implement interface `ZIF_SCPMS_NOTIFICATION`.
 
