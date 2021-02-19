@@ -116,7 +116,7 @@ ENDCLASS.
 
 
 
-CLASS zcl_scpms_push_notification IMPLEMENTATION.
+CLASS ZCL_SCPMS_PUSH_NOTIFICATION IMPLEMENTATION.
 
 
   METHOD close_connection.
@@ -143,6 +143,7 @@ CLASS zcl_scpms_push_notification IMPLEMENTATION.
     me->http_client = http_client.
 
   ENDMETHOD.
+
 
   METHOD create_connection.
 
@@ -346,6 +347,9 @@ CLASS zcl_scpms_push_notification IMPLEMENTATION.
 
     DATA payload_x TYPE xstring.
 
+    " Strange bug, when sending multiple notifications in a loop, we need to recreate the client otherwise requests will return HTTP 403
+    http_client = create_connection( destination_name ).
+
     cl_http_utility=>set_request_uri( request = http_client->request
                                       uri     = uri ).
 
@@ -464,5 +468,4 @@ CLASS zcl_scpms_push_notification IMPLEMENTATION.
     json = json && ']'.
 
   ENDMETHOD.
-
 ENDCLASS.
