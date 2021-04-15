@@ -74,6 +74,12 @@
      <MSGNR>011</MSGNR>
      <TEXT>Close connection failed.</TEXT>
     </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZSCPMS_PUSH_NOTIF</ARBGB>
+     <MSGNR>012</MSGNR>
+     <TEXT>List of users cannot exceed 1000 entries per request. Please split table.</TEXT>
+    </T100>
    </T100>
   </asx:values>
  </asx:abap>
