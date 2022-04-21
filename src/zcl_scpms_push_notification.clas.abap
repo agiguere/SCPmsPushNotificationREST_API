@@ -289,6 +289,11 @@ CLASS ZCL_SCPMS_PUSH_NOTIFICATION IMPLEMENTATION.
         EXPORTING
           textid = zcx_scpms_push_notification=>user_list_empty.
 
+    ELSEIF lines( users ) GT 1000.
+      RAISE EXCEPTION TYPE zcx_scpms_push_notification
+        EXPORTING
+          textid = zcx_scpms_push_notification=>user_list_too_big.
+
     ELSEIF notification IS NOT BOUND.
       RAISE EXCEPTION TYPE zcx_scpms_push_notification
         EXPORTING

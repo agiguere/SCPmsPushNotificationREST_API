@@ -107,6 +107,15 @@ public section.
       attr3 type scx_attrname value '',
       attr4 type scx_attrname value '',
     end of CLOSE_CONNECTION_FAILED .
+  constants:
+    begin of USER_LIST_TOO_BIG,
+      msgid type symsgid value 'ZSCPMS_PUSH_NOTIF',
+      msgno type symsgno value '012',
+      attr1 type scx_attrname value '',
+      attr2 type scx_attrname value '',
+      attr3 type scx_attrname value '',
+      attr4 type scx_attrname value '',
+    end of USER_LIST_TOO_BIG .
 
   methods CONSTRUCTOR
     importing
